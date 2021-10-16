@@ -1,0 +1,51 @@
+<h1 class="animated fadeIn mt-5">
+    {{ heroe.nombre | uppercase }}
+</h1>
+<hr />
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre" />
+        <br /><br />
+        <a [routerLink]="['/heroes']" class="btn btn-dark btn-block">Regresar</a>
+    </div>
+
+    <div class="col-md-8 mt-3">
+        <h3>{{ heroe.nombre }}</h3>
+        <hr />
+        <p>
+            {{ heroe.bio }}
+        </p>
+        <table class="table table-striped mt-3" style="background-color: #ddd5f3;">
+            <thead>
+                <tr>
+                    <th>Distancia al sol</th>
+                    <th>Gravedad</th>
+                    <th>Duración de un día</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ heroe.distanciaSol }}</td>
+                    <td>{{ heroe.gravedad }}</td>
+                    <td>{{ heroe.duracionDia }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <div>
+      <img
+        *ngIf="heroe.casa == 'Marvel'"
+        class="img-logo"
+        src="assets/img/marvel-logo.png"
+        alt="DC"
+      />
+      <img
+        *ngIf="heroe.casa == 'DC'"
+        class="img-logo"
+        src="assets/img/dc-logo.jpg"
+        alt="Marvel"
+      />
+    </div> -->
+    </div>
+</div>
